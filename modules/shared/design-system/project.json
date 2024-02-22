@@ -1,0 +1,9 @@
+{
+  "name": "design-system",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "modules/shared/design-system/src",
+  "prefix": "myngapp",
+  "tags": [],
+  "projectType": "library",
+  "targets": {}
+}
