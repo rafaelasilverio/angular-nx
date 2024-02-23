@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Mulish';
+    src: url('../fontes/Mulish-VariableFont_wght.ttf') format('woff2'),
+         url('../fontes/Mulish-Italic-VariableFont_wght.ttf') format('woff');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+button {
+    width: 123px;
+    height: 48px;
+    padding: 12px, 32px, 12px, 32px;
+    border-radius: 8px;
+    background: #2D5BFF;
+    border: none;
+    font-family: Mulish;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+button.disabled {
+    background: #EFEFEF;
+    color: #8A8A8A;
+}
+
+button.secondary {
+    background: #ECF0FF;
+    color: #2D5BFF;
+}
+
+button:hover {
+    background: #1B4AF0;
+}
+
+button:focus {
+    border: 1px solid #AF4BFE;
+}

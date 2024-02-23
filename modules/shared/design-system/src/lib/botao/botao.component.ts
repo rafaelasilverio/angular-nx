@@ -9,9 +9,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './botao.component.css',
 })
 export class BotaoComponent {
-  @Input() text = 'Click me!';
-  @Input() padding = 10;
-  @Input() disabled = true;
+  @Input() text = '';
+  @Input() disabled = false;
+  @Input() variant = 'primary'
+  
+
   @Output() onClick = new EventEmitter<void>();
 
   metodo() {

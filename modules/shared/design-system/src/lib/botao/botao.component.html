@@ -1,6 +1,7 @@
 <button 
-    [disabled]="disabled" 
-    [ngStyle]="{ 'padding.px': padding }"
+    [ngClass]="{disabled: disabled}"
+    [text]="text"
+    [class]="variant"
     (click)="metodo()">
     {{ text }}
 </button>
