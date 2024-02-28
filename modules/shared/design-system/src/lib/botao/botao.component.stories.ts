@@ -1,28 +1,55 @@
-import { moduleMetadata, Meta, StoryObj } from '@storybook/angular';
+import { Meta, StoryObj } from '@storybook/angular';
 import { BotaoComponent } from './botao.component';
-import { withActions } from '@storybook/addon-actions/decorator'
-
-import { userEvent, within } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
-import { CommonModule } from '@angular/common';
 
 const meta: Meta<BotaoComponent> = {
+  title: 'Botão',
+  tags: ['autodocs'],
   component: BotaoComponent,
-  title: 'BotaoComponent',
+  parameters: {
+    controls: { expanded: true },
+    docs: {
+      description: {
+        component: 'Este é um componente de botão utilizado para disparar ações.'
+      }
+    },
+    argTypes: {
+      text: { control: 'text' },
+      disabled: { control: 'boolean' },
+      variant: { control: { type: 'select', options: ['primary', 'secondary'] } }
+    }
+  }
 };
 export default meta;
 type Story = StoryObj<BotaoComponent>;
 
 export const Primary: Story = {
   args: {
-    text: 'Click me!',
-    disabled: false
+    text: 'Action',
+    disabled: false,
+    variant: 'primary'
   }
 };
 
+export const PrimaryDisabled: Story = {
+  args: {
+    text: 'Action',
+    disabled: true,
+    variant: 'primary'
+  }
+}
+
 export const Secondary: Story = {
   args: {
-    text: 'Click me!',
+    text: 'Action',
+    disabled: false,
     variant: 'secondary'
   }
 };
+
+export const SecondaryDisabled: Story = {
+  args: {
+    text: 'Action',
+    variant: 'secondary',
+    disabled: true
+  }
+}

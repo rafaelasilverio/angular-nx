@@ -26,6 +26,7 @@ button {
 button.disabled {
     background: #EFEFEF;
     color: #8A8A8A;
+    cursor: not-allowed;
 }
 
 button.secondary {
@@ -33,8 +34,14 @@ button.secondary {
     color: #2D5BFF;
 }
 
-button:hover {
+button.secondary.disabled {
+    background: #EFEFEF;
+    color: #8A8A8A;
+}
+
+button.primary:hover:not(.disabled), button.secondary:hover:not(.disabled) {
     background: #1B4AF0;
+    color: #FFFFFF;
 }
 
 button:focus {

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -12,13 +12,4 @@ export class BotaoComponent {
   @Input() text = '';
   @Input() disabled = false;
   @Input() variant = 'primary'
-  
-
-  @Output() onClick = new EventEmitter<void>();
-
-  metodo() {
-    this.onClick.emit();
-    console.log('Fui clicado')
-  }
-
 }
