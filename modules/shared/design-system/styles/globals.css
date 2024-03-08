@@ -1,0 +1,27 @@
+:root {
+  /* Cinza */
+  --texto-primario: #181818;
+  --texto-secundario: #5C5C5C;
+  --texto-terciario: #747474;
+  --icones: #7C7B7B;
+  --contorno: #D7D7D7;
+  --divisores: #EDEDED;
+  --texto-desativado: #8A8A8A;
+  --bg-desativado: #EFEFEF;
+  --boxes-inputs: #F8F8F8;
+  --branco: #FFF;
+  
+  /* Tom 1: Azul */
+  --azul-primario: #2D5BFF;
+  --azul-secundario: #6284FD;
+  --azul-terciario: #96ADFF;
+  --azul-quaternario: #ECF0FF;
+  --azul-hover: #1B4AF0;
+  --azul-click: #002ED0;
+
+  /* Tom 2: Violeta */
+  --violeta-primario: #AF4BFE;
+  --violeta-secundario: #BE74F9;
+  --violeta-terciario: #E2BDFF;
+  --violeta-quaternario: #F5E8FF;
+}

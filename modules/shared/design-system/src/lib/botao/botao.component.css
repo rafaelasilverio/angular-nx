@@ -12,7 +12,7 @@ button {
     height: 48px;
     padding: 12px, 32px, 12px, 32px;
     border-radius: 8px;
-    background: #2D5BFF;
+    background: var(--azul-primario);
     border: none;
     font-family: Mulish;
     font-size: 18px;
@@ -20,30 +20,30 @@ button {
     line-height: 24px;
     letter-spacing: 0.02em;
     text-align: center;
-    color: #FFFFFF;
+    color: var(--branco);
 }
 
 button.disabled {
-    background: #EFEFEF;
-    color: #8A8A8A;
+    background: var(--bg-desativado);
+    color: var(--texto-desativado);
     cursor: not-allowed;
 }
 
 button.secondary {
-    background: #ECF0FF;
-    color: #2D5BFF;
+    background: var(--azul-quaternario);
+    color: var(--azul-primario);
 }
 
 button.secondary.disabled {
-    background: #EFEFEF;
-    color: #8A8A8A;
+    background: var(--bg-desativado);
+    color: var(--texto-desativado);
 }
 
 button.primary:hover:not(.disabled), button.secondary:hover:not(.disabled) {
-    background: #1B4AF0;
-    color: #FFFFFF;
+    background: var(--azul-hover);
+    color: var(--branco);
 }
 
 button:focus {
-    border: 1px solid #AF4BFE;
+    border: 1px solid var(--violeta-primario);
 }

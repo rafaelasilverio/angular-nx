@@ -5,5 +5,14 @@
   "prefix": "myngapp",
   "tags": [],
   "projectType": "library",
-  "targets": {}
+  "targets": {
+    "build-storybook": {
+      "options": {
+        "styles": ["modules/shared/design-system/styles/globals.css"],
+        "stylePreprocessorOptions": {
+          "includePaths": ["modules/shared/design-system/src/lib"]
+        }
+      }
+    }
+  }
 }
