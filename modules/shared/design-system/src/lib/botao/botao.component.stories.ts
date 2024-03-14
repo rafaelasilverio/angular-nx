@@ -15,112 +15,112 @@ const meta: Meta<BotaoComponent> = {
     argTypes: {
       texto: { control: 'text', },
       desabilitado: { control: 'boolean' },
-      variante: { control: { type: 'select', options: ['primary', 'secondary'] } }
+      variante: { control: { type: 'select', options: ['primario', 'secundario'] } }
     }
   }
 };
 export default meta;
 type Story = StoryObj<BotaoComponent>;
 
-export const Primary: Story = {
+export const Primario: Story = {
   args: {
     texto: 'Action',
     desabilitado: false,
-    variante: 'primary',
+    variante: 'primario',
     tema: ''
   }
 };
 
-export const PrimaryDisabled: Story = {
+export const PrimarioDesabilitado: Story = {
   args: {
     texto: 'Action',
     desabilitado: true,
-    variante: 'primary',
+    variante: 'primario',
   }
 }
 
-export const Secondary: Story = {
+export const Secundario: Story = {
   args: {
     texto: 'Action',
     desabilitado: false,
-    variante: 'secondary',
+    variante: 'secundario',
   }
 };
 
-export const SecondaryDisabled: Story = {
+export const SecundarioDesabilitado: Story = {
   args: {
     texto: 'Action',
-    variante: 'secondary',
+    variante: 'secundario',
     desabilitado: true,
   }
 }
 
-export const Tertiary: Story = {
+export const Terciario: Story = {
   args: {
     texto: 'Action',
     desabilitado: false,
-    variante: 'tertiary',
+    variante: 'terciario',
   }
 };
 
-export const TertiaryDisabled: Story = {
+export const TerciarioDesabilitado: Story = {
   args: {
     texto: 'Action',
     desabilitado: true,
-    variante: 'tertiary',
+    variante: 'terciario',
   }
 };
 
-export const PrimaryViolet: Story = {
+export const PrimarioVioleta: Story = {
   args: {
     texto: 'Action',
     desabilitado: false,
-    variante: 'primary',
+    variante: 'primario',
     tema: 'tema-violeta'
   }
 };
 
-export const PrimaryVioletDisabled: Story = {
+export const PrimarioVioletaDesabilitado: Story = {
   args: {
     texto: 'Action',
     desabilitado: true,
-    variante: 'primary',
+    variante: 'primario',
     tema: 'tema-violeta'
   }
 };
 
-export const SecondaryViolet: Story = {
+export const SecundarioVioleta: Story = {
   args: {
     texto: 'Action',
     desabilitado: false,
-    variante: 'secondary',
+    variante: 'secundario',
     tema: 'tema-violeta'
   }
 };
 
-export const SecondaryVioletDisabled: Story = {
+export const SecundarioVioletaDesabilitado: Story = {
   args: {
     texto: 'Action',
     desabilitado: true,
-    variante: 'secondary',
+    variante: 'secundario',
     tema: 'tema-violeta'
   }
 };
 
-export const TertiaryViolet: Story = {
+export const TerciarioVioleta: Story = {
   args: {
     texto: 'Action',
     desabilitado: false,
-    variante: 'tertiary',
+    variante: 'terciario',
     tema: 'tema-violeta'
   }
 };
 
-export const TertiaryVioletDisabled: Story = {
+export const TerciarioVioletaDesabilitado: Story = {
   args: {
     texto: 'Action',
     desabilitado: true,
-    variante: 'tertiary',
+    variante: 'terciario',
     tema: 'tema-violeta'
   }
 };

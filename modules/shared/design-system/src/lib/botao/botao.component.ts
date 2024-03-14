@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-type variantes = 'primary' | 'secondary' | 'tertiary';
+type variantes = 'primario' | 'secundario' | 'terciario';
 type temas = '' | 'tema-violeta';
 
 @Component({
@@ -14,7 +14,7 @@ type temas = '' | 'tema-violeta';
 export class BotaoComponent {
   @Input() texto = '';
   @Input() desabilitado = false;
-  @Input() variante: variantes = 'primary';
+  @Input() variante: variantes = 'primario';
   @Input() tema: temas = '';
 
   obterVariante(variante: variantes, desabilitado: boolean, tema: temas): string {

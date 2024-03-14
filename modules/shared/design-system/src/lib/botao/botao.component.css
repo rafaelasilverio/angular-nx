@@ -30,57 +30,57 @@ button:focus {
     outline-color: #AF4BFE;
 }
 
-button.primary:hover {
+button.primario:hover {
     background: var(--cor-hover);
     color: var(--branco);
 }
 
-button.primary:active {
+button.primario:active {
     background: var(--cor-click);
     color: var(--branco);
 }
 
-button.primary:disabled {
+button.primario:disabled {
     background: var(--bg-desativado);
     color: var(--texto-desativado);
 }
 
-button.secondary {
+button.secundario {
     background: var(--cor-quaternaria);
     color: var(--cor-primaria);
 }
 
-button.secondary:hover {
+button.secundario:hover {
     background: var(--cor-hover);
     color: var(--branco);
 }
 
-button.secondary:active {
+button.secundario:active {
     background: var(--cor-click);
     color: var(--branco);
 }
 
-button.secondary:disabled {
+button.secundario:disabled {
     background: var(--bg-desativado);
     color: var(--texto-desativado);
 }
 
-button.tertiary {
+button.terciario {
     background: var(--branco);
     color: var(--cor-primaria);
 }
 
-button.tertiary:hover {
+button.terciario:hover {
     background: var(--branco);
     color: var(--cor-hover);
 }
 
-button.tertiary:active {
+button.terciario:active {
     background: var(--branco);
     color: var(--cor-click);
 }
 
-button.tertiary.disabled {
+button.terciario.disabled {
     background: var(--branco);
     color: var(--texto-desativado);
 }
