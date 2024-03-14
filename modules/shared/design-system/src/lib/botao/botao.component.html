@@ -1,7 +1,8 @@
-<button 
-    [ngClass]="{disabled: disabled}"
-    [class]="variant">
-    {{ text }}
+<button
+    [class]="obterVariante(variante, desabilitado, tema)"
+    [disabled]="desabilitado"
+>
+    {{ texto }}
 </button>
 
 
