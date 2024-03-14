@@ -1,18 +1,17 @@
 @font-face {
     font-family: 'Mulish';
     src: url('../fontes/Mulish-VariableFont_wght.ttf') format('woff2'),
-         url('../fontes/Mulish-Italic-VariableFont_wght.ttf') format('woff');
+        url('../fontes/Mulish-Italic-VariableFont_wght.ttf') format('woff');
     font-weight: 400;
     font-display: swap;
     font-style: normal;
 }
 
 button {
-    width: 123px;
-    height: 48px;
-    padding: 12px, 32px, 12px, 32px;
+    background: var(--cor-primaria);
+    color: var(--branco);
+    padding: 12px 32px 12px 32px;
     border-radius: 8px;
-    background: var(--azul-primario);
     border: none;
     font-family: Mulish;
     font-size: 18px;
@@ -20,30 +19,68 @@ button {
     line-height: 24px;
     letter-spacing: 0.02em;
     text-align: center;
-    color: var(--branco);
+    transition: color .3s, background-color .3s;
 }
 
 button.disabled {
-    background: var(--bg-desativado);
-    color: var(--texto-desativado);
     cursor: not-allowed;
 }
 
-button.secondary {
-    background: var(--azul-quaternario);
-    color: var(--azul-primario);
+button:focus {
+    outline-color: #AF4BFE;
 }
 
-button.secondary.disabled {
+button.primary:hover {
+    background: var(--cor-hover);
+    color: var(--branco);
+}
+
+button.primary:active {
+    background: var(--cor-click);
+    color: var(--branco);
+}
+
+button.primary:disabled {
     background: var(--bg-desativado);
     color: var(--texto-desativado);
 }
 
-button.primary:hover:not(.disabled), button.secondary:hover:not(.disabled) {
-    background: var(--azul-hover);
+button.secondary {
+    background: var(--cor-quaternaria);
+    color: var(--cor-primaria);
+}
+
+button.secondary:hover {
+    background: var(--cor-hover);
     color: var(--branco);
 }
 
-button:focus {
-    border: 1px solid var(--violeta-primario);
+button.secondary:active {
+    background: var(--cor-click);
+    color: var(--branco);
+}
+
+button.secondary:disabled {
+    background: var(--bg-desativado);
+    color: var(--texto-desativado);
+}
+
+button.tertiary {
+    background: var(--branco);
+    color: var(--cor-primaria);
+}
+
+button.tertiary:hover {
+    background: var(--branco);
+    color: var(--cor-hover);
+}
+
+button.tertiary:active {
+    background: var(--branco);
+    color: var(--cor-click);
+}
+
+button.tertiary.disabled {
+    background: var(--branco);
+    color: var(--texto-desativado);
 }

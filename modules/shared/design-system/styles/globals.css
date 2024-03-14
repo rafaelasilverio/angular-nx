@@ -11,17 +11,20 @@
   --boxes-inputs: #F8F8F8;
   --branco: #FFF;
   
-  /* Tom 1: Azul */
-  --azul-primario: #2D5BFF;
-  --azul-secundario: #6284FD;
-  --azul-terciario: #96ADFF;
-  --azul-quaternario: #ECF0FF;
-  --azul-hover: #1B4AF0;
-  --azul-click: #002ED0;
+  --cor-primaria: #2D5BFF;
+  --cor-secundaria: #6284FD;
+  --cor-terciaria: #96ADFF;
+  --cor-quaternaria: #ECF0FF;
+  --cor-hover: #1B4AF0;
+  --cor-click: #002ED0;
+}
 
-  /* Tom 2: Violeta */
-  --violeta-primario: #AF4BFE;
-  --violeta-secundario: #BE74F9;
-  --violeta-terciario: #E2BDFF;
-  --violeta-quaternario: #F5E8FF;
+.tema-violeta {
+  --cor-primaria: #AF4BFE;
+  --cor-secundaria: #BE74F9;
+  --cor-terciaria: #E2BDFF;
+  --cor-quaternaria: #F5E8FF;
+  /* Essas duas abaixo não foram definidas no figma: */
+  --cor-hover: #a530ff;
+  --cor-click: #8e25df;
 }
