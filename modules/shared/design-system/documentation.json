@@ -170,7 +170,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<BotaoComponent>",
-                "defaultValue": "{\r\n  title: 'botao',\r\n  tags: ['autodocs'],\r\n  component: BotaoComponent,\r\n  parameters: {\r\n    // controls: { expanded: true },\r\n    docs: {\r\n      description: {\r\n        component: 'Este é um componente de botao utilizado para disparar ações.'\r\n      }\r\n    },\r\n    // argTypes: {\r\n    //   texto: { control: 'text', },\r\n    //   desabilitado: { control: 'boolean' },\r\n    //   variante: { control: { type: 'select', options: ['primario', 'secundario'] } }\r\n    // }\r\n  }\r\n}"
+                "defaultValue": "{\r\n  tags: ['autodocs'],\r\n  component: BotaoComponent,\r\n  parameters: {\r\n    // controls: { expanded: true },\r\n    docs: {\r\n      description: {\r\n        component: 'Este é um componente de botao utilizado para disparar ações.'\r\n      }\r\n    },\r\n    // argTypes: {\r\n    //   texto: { control: 'text', },\r\n    //   desabilitado: { control: 'boolean' },\r\n    //   variante: { control: { type: 'select', options: ['primario', 'secundario'] } }\r\n    // }\r\n  }\r\n}"
             },
             {
                 "name": "preview",
@@ -362,7 +362,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<BotaoComponent>",
-                    "defaultValue": "{\r\n  title: 'botao',\r\n  tags: ['autodocs'],\r\n  component: BotaoComponent,\r\n  parameters: {\r\n    // controls: { expanded: true },\r\n    docs: {\r\n      description: {\r\n        component: 'Este é um componente de botao utilizado para disparar ações.'\r\n      }\r\n    },\r\n    // argTypes: {\r\n    //   texto: { control: 'text', },\r\n    //   desabilitado: { control: 'boolean' },\r\n    //   variante: { control: { type: 'select', options: ['primario', 'secundario'] } }\r\n    // }\r\n  }\r\n}"
+                    "defaultValue": "{\r\n  tags: ['autodocs'],\r\n  component: BotaoComponent,\r\n  parameters: {\r\n    // controls: { expanded: true },\r\n    docs: {\r\n      description: {\r\n        component: 'Este é um componente de botao utilizado para disparar ações.'\r\n      }\r\n    },\r\n    // argTypes: {\r\n    //   texto: { control: 'text', },\r\n    //   desabilitado: { control: 'boolean' },\r\n    //   variante: { control: { type: 'select', options: ['primario', 'secundario'] } }\r\n    // }\r\n  }\r\n}"
                 },
                 {
                     "name": "Primario",
