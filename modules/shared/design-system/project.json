@@ -6,13 +6,22 @@
   "tags": [],
   "projectType": "library",
   "targets": {
+    "storybook": {
+      "options": {
+        "compodoc": true,
+        "compodocArgs": ["-e", "json", "-d", "modules/shared/design-system"]
+      }
+    },
     "build-storybook": {
       "options": {
         "styles": ["modules/shared/design-system/styles/globals.css"],
         "stylePreprocessorOptions": {
           "includePaths": ["modules/shared/design-system/src/lib"]
-        }
+        },
+        "compodoc": true,
+        "compodocArgs": ["-e", "json", "-d", "modules/shared/design-system"]
       }
     }
+
   }
 }

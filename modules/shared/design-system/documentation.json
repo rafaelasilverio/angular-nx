@@ -1,0 +1,709 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "BotaoComponent",
+            "id": "component-BotaoComponent-af38ae9b486b85f0a178886ba10cf3d495da6116f7673c52557bb092405e0e7a11a618d3c68649b14cb3459bd03e4bbbe1231c7e58c34a406f0a82bf579cf1a3",
+            "file": "modules/shared/design-system/src/lib/botao/botao.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "myngapp-botao",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./botao.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "desabilitado",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "tema",
+                    "defaultValue": "'azul'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 21,
+                    "type": "temas",
+                    "decorators": []
+                },
+                {
+                    "name": "texto",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nTexto botão\n",
+                    "description": "<p>Texto botão</p>\n",
+                    "line": 18,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "variante",
+                    "defaultValue": "'primario'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "variantes",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "obterVariante",
+                    "args": [
+                        {
+                            "name": "variante",
+                            "type": "variantes",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "desabilitado",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "tema",
+                            "type": "temas",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "string",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "variante",
+                            "type": "variantes",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "desabilitado",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "tema",
+                            "type": "temas",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\ntype variantes = 'primario' | 'secundario' | 'terciario';\r\ntype temas = 'azul' | 'violeta';\r\n\r\n@Component({\r\n  selector: 'myngapp-botao',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './botao.component.html',\r\n  styleUrl: './botao.component.css',\r\n})\r\nexport class BotaoComponent {\r\n  /**\r\n   * Texto botão\r\n   */\r\n  @Input() texto = '';\r\n  @Input() desabilitado = false;\r\n  @Input() variante: variantes = 'primario';\r\n  @Input() tema: temas = 'azul';\r\n\r\n  obterVariante(variante: variantes, desabilitado: boolean, tema: temas): string {\r\n    let classes = `${variante} ${tema}`;\r\n\r\n    classes += desabilitado ? \" disabled\" : \"\";\r\n\r\n    return classes;\r\n  }\r\n}\r\n",
+            "styleUrl": "./botao.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<button\r\n    [class]=\"obterVariante(variante, desabilitado, tema)\"\r\n    [disabled]=\"desabilitado\"\r\n>\r\n    {{ texto }}\r\n</button>\r\n\r\n\r\n"
+        }
+    ],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "config",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "modules/shared/design-system/.storybook/main.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StorybookConfig",
+                "defaultValue": "{\r\n  stories: ['../**/*.stories.@(js|jsx|ts|tsx|mdx)'],\r\n  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions', '@storybook/addon-docs'],\r\n  framework: {\r\n    name: '@storybook/angular',\r\n    options: {},\r\n  },\r\n  docs: {\r\n    autodocs: \"tag\"\r\n  }\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<BotaoComponent>",
+                "defaultValue": "{\r\n  title: 'botao',\r\n  tags: ['autodocs'],\r\n  component: BotaoComponent,\r\n  parameters: {\r\n    // controls: { expanded: true },\r\n    docs: {\r\n      description: {\r\n        component: 'Este é um componente de botao utilizado para disparar ações.'\r\n      }\r\n    },\r\n    // argTypes: {\r\n    //   texto: { control: 'text', },\r\n    //   desabilitado: { control: 'boolean' },\r\n    //   variante: { control: { type: 'select', options: ['primario', 'secundario'] } }\r\n    // }\r\n  }\r\n}"
+            },
+            {
+                "name": "preview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "modules/shared/design-system/.storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Preview",
+                "defaultValue": "{\r\n    parameters: {\r\n        actions: { argTypesRegex: \"^on [A-Z].*\" },\r\n            controls: {\r\n                matchers: {\r\n                    color: /(background|color)$/i,\r\n                    date: /Dates$/,\r\n                },\r\n            },\r\n    },\r\n}"
+            },
+            {
+                "name": "Primario",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    texto: 'Action',\r\n    desabilitado: false,\r\n    variante: 'primario',\r\n    tema: 'azul'\r\n  }\r\n}"
+            },
+            {
+                "name": "PrimarioDesabilitado",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    ...Primario.args,\r\n    desabilitado: true,\r\n  }\r\n}"
+            },
+            {
+                "name": "PrimarioVioleta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    ...Primario.args,\r\n    tema: 'violeta'\r\n  }\r\n}"
+            },
+            {
+                "name": "PrimarioVioletaDesabilitado",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    ...PrimarioVioleta.args,\r\n    desabilitado: true\r\n  }\r\n}"
+            },
+            {
+                "name": "Secundario",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    ...Primario.args,\r\n    variante: 'secundario',\r\n  }\r\n}"
+            },
+            {
+                "name": "SecundarioDesabilitado",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    ...Secundario.args,\r\n    desabilitado: true,\r\n  }\r\n}"
+            },
+            {
+                "name": "SecundarioVioleta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    ...PrimarioVioleta.args,\r\n    variante: 'secundario',\r\n  }\r\n}"
+            },
+            {
+                "name": "SecundarioVioletaDesabilitado",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    ...SecundarioVioleta.args,\r\n    desabilitado: true,\r\n  }\r\n}"
+            },
+            {
+                "name": "Terciario",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    ...Primario.args,\r\n    variante: 'terciario',\r\n  }\r\n}"
+            },
+            {
+                "name": "TerciarioDesabilitado",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    ...Terciario.args,\r\n    desabilitado: true,\r\n  }\r\n}"
+            },
+            {
+                "name": "TerciarioVioleta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    ...PrimarioVioleta.args,\r\n    variante: 'terciario',\r\n  }\r\n}"
+            },
+            {
+                "name": "TerciarioVioletaDesabilitado",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    ...TerciarioVioleta.args,\r\n    desabilitado: true,\r\n  }\r\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<BotaoComponent>",
+                "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "temas",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"azul\" | \"violeta\"",
+                "file": "modules/shared/design-system/src/lib/botao/botao.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 192
+            },
+            {
+                "name": "variantes",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"primario\" | \"secundario\" | \"terciario\"",
+                "file": "modules/shared/design-system/src/lib/botao/botao.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 192
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "modules/shared/design-system/.storybook/main.ts": [
+                {
+                    "name": "config",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "modules/shared/design-system/.storybook/main.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StorybookConfig",
+                    "defaultValue": "{\r\n  stories: ['../**/*.stories.@(js|jsx|ts|tsx|mdx)'],\r\n  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions', '@storybook/addon-docs'],\r\n  framework: {\r\n    name: '@storybook/angular',\r\n    options: {},\r\n  },\r\n  docs: {\r\n    autodocs: \"tag\"\r\n  }\r\n}"
+                }
+            ],
+            "modules/shared/design-system/src/lib/botao/botao.component.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<BotaoComponent>",
+                    "defaultValue": "{\r\n  title: 'botao',\r\n  tags: ['autodocs'],\r\n  component: BotaoComponent,\r\n  parameters: {\r\n    // controls: { expanded: true },\r\n    docs: {\r\n      description: {\r\n        component: 'Este é um componente de botao utilizado para disparar ações.'\r\n      }\r\n    },\r\n    // argTypes: {\r\n    //   texto: { control: 'text', },\r\n    //   desabilitado: { control: 'boolean' },\r\n    //   variante: { control: { type: 'select', options: ['primario', 'secundario'] } }\r\n    // }\r\n  }\r\n}"
+                },
+                {
+                    "name": "Primario",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    texto: 'Action',\r\n    desabilitado: false,\r\n    variante: 'primario',\r\n    tema: 'azul'\r\n  }\r\n}"
+                },
+                {
+                    "name": "PrimarioDesabilitado",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    ...Primario.args,\r\n    desabilitado: true,\r\n  }\r\n}"
+                },
+                {
+                    "name": "PrimarioVioleta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    ...Primario.args,\r\n    tema: 'violeta'\r\n  }\r\n}"
+                },
+                {
+                    "name": "PrimarioVioletaDesabilitado",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    ...PrimarioVioleta.args,\r\n    desabilitado: true\r\n  }\r\n}"
+                },
+                {
+                    "name": "Secundario",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    ...Primario.args,\r\n    variante: 'secundario',\r\n  }\r\n}"
+                },
+                {
+                    "name": "SecundarioDesabilitado",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    ...Secundario.args,\r\n    desabilitado: true,\r\n  }\r\n}"
+                },
+                {
+                    "name": "SecundarioVioleta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    ...PrimarioVioleta.args,\r\n    variante: 'secundario',\r\n  }\r\n}"
+                },
+                {
+                    "name": "SecundarioVioletaDesabilitado",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    ...SecundarioVioleta.args,\r\n    desabilitado: true,\r\n  }\r\n}"
+                },
+                {
+                    "name": "Terciario",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    ...Primario.args,\r\n    variante: 'terciario',\r\n  }\r\n}"
+                },
+                {
+                    "name": "TerciarioDesabilitado",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    ...Terciario.args,\r\n    desabilitado: true,\r\n  }\r\n}"
+                },
+                {
+                    "name": "TerciarioVioleta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    ...PrimarioVioleta.args,\r\n    variante: 'terciario',\r\n  }\r\n}"
+                },
+                {
+                    "name": "TerciarioVioletaDesabilitado",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    ...TerciarioVioleta.args,\r\n    desabilitado: true,\r\n  }\r\n}"
+                }
+            ],
+            "modules/shared/design-system/.storybook/preview.ts": [
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "modules/shared/design-system/.storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\r\n    parameters: {\r\n        actions: { argTypesRegex: \"^on [A-Z].*\" },\r\n            controls: {\r\n                matchers: {\r\n                    color: /(background|color)$/i,\r\n                    date: /Dates$/,\r\n                },\r\n            },\r\n    },\r\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "modules/shared/design-system/src/lib/botao/botao.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<BotaoComponent>",
+                    "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "modules/shared/design-system/src/lib/botao/botao.component.ts": [
+                {
+                    "name": "temas",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"azul\" | \"violeta\"",
+                    "file": "modules/shared/design-system/src/lib/botao/botao.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 192
+                },
+                {
+                    "name": "variantes",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"primario\" | \"secundario\" | \"terciario\"",
+                    "file": "modules/shared/design-system/src/lib/botao/botao.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 192
+                }
+            ]
+        }
+    },
+    "routes": [],
+    "coverage": {
+        "count": 1,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "modules/shared/design-system/.storybook/main.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "config",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/.storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primario",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "PrimarioDesabilitado",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "PrimarioVioleta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "PrimarioVioletaDesabilitado",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secundario",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "SecundarioDesabilitado",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "SecundarioVioleta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "SecundarioVioletaDesabilitado",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Terciario",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TerciarioDesabilitado",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TerciarioVioleta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TerciarioVioletaDesabilitado",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/src/lib/botao/botao.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "BotaoComponent",
+                "coveragePercent": 16,
+                "coverageCount": "1/6",
+                "status": "low"
+            }
+        ]
+    }
+}
