@@ -147,6 +147,59 @@
             "stylesData": "",
             "extends": [],
             "templateData": "<button\r\n    [class]=\"obterVariante(variante, desabilitado, tema)\"\r\n    [disabled]=\"desabilitado\"\r\n>\r\n    {{ texto }}\r\n</button>\r\n\r\n\r\n"
+        },
+        {
+            "name": "InputTextComponent",
+            "id": "component-InputTextComponent-c8f3df1c0088d0c9356db6da35bb5f9569779dac398213c010b944321cb64b8e5b83a87191afe674fbc6753f8fb84f6bd8a7c3b9b8755e01c609c23ae48397c3",
+            "file": "modules/shared/design-system/src/lib/input-text/input-text.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "myngapp-input-text",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./input-text.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "multilinha",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'myngapp-input-text',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './input-text.component.html',\n  styleUrl: './input-text.component.css',\n})\nexport class InputTextComponent {\n  @Input() multilinha = false;\n}\n",
+            "styleUrl": "./input-text.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "@if(!multilinha){\r\n    <input type=\"text\">\r\n}@else{\r\n    <textarea></textarea>\r\n}   \r\n    "
         }
     ],
     "modules": [],
@@ -160,7 +213,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "StorybookConfig",
-                "defaultValue": "{\r\n  stories: ['../**/*.stories.@(js|jsx|ts|tsx|mdx)'],\r\n  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions', '@storybook/addon-docs'],\r\n  framework: {\r\n    name: '@storybook/angular',\r\n    options: {},\r\n  },\r\n  docs: {\r\n    autodocs: \"tag\"\r\n  }\r\n}"
+                "defaultValue": "{\r\n  stories: ['../**/*.stories.@(js|jsx|ts|tsx|mdx)'],\r\n  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions', '@storybook/addon-docs'],\r\n  framework: {\r\n    name: '@storybook/angular',\r\n    options: {},\r\n  },\r\n  docs: {\r\n    autodocs: true\r\n  }\r\n}"
             },
             {
                 "name": "meta",
@@ -170,7 +223,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<BotaoComponent>",
-                "defaultValue": "{\r\n  tags: ['autodocs'],\r\n  component: BotaoComponent,\r\n  parameters: {\r\n    // controls: { expanded: true },\r\n    docs: {\r\n      description: {\r\n        component: 'Este é um componente de botao utilizado para disparar ações.'\r\n      }\r\n    },\r\n    // argTypes: {\r\n    //   texto: { control: 'text', },\r\n    //   desabilitado: { control: 'boolean' },\r\n    //   variante: { control: { type: 'select', options: ['primario', 'secundario'] } }\r\n    // }\r\n  }\r\n}"
+                "defaultValue": "{\r\n\r\n  component: BotaoComponent,\r\n  parameters: {\r\n    // controls: { expanded: true },\r\n    docs: {\r\n      description: {\r\n        component: 'Este é um componente de botao utilizado para disparar ações.'\r\n      }\r\n    },\r\n    // argTypes: {\r\n    //   texto: { control: 'text', },\r\n    //   desabilitado: { control: 'boolean' },\r\n    //   variante: { control: { type: 'select', options: ['primario', 'secundario'] } }\r\n    // }\r\n  }\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "modules/shared/design-system/src/lib/input-text/input-text.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<InputTextComponent>",
+                "defaultValue": "{\n  component: InputTextComponent,\n  parameters: {\n    docs: {\n      description: {\n        component: 'Este é um componente de input.'\n      }\n    },\n\n  }\n}"
             },
             {
                 "name": "preview",
@@ -193,6 +256,16 @@
                 "defaultValue": "{\r\n  args: {\r\n    texto: 'Action',\r\n    desabilitado: false,\r\n    variante: 'primario',\r\n    tema: 'azul'\r\n  }\r\n}"
             },
             {
+                "name": "Primario",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "modules/shared/design-system/src/lib/input-text/input-text.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    multilinha: false,\n  },\n}"
+            },
+            {
                 "name": "PrimarioDesabilitado",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -201,6 +274,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    ...Primario.args,\r\n    desabilitado: true,\r\n  }\r\n}"
+            },
+            {
+                "name": "PrimarioMultilinha",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "modules/shared/design-system/src/lib/input-text/input-text.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    multilinha: true,\n  },\n}"
             },
             {
                 "name": "PrimarioVioleta",
@@ -317,6 +400,17 @@
                 "kind": 183
             },
             {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<InputTextComponent>",
+                "file": "modules/shared/design-system/src/lib/input-text/input-text.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
                 "name": "temas",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
@@ -350,7 +444,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "StorybookConfig",
-                    "defaultValue": "{\r\n  stories: ['../**/*.stories.@(js|jsx|ts|tsx|mdx)'],\r\n  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions', '@storybook/addon-docs'],\r\n  framework: {\r\n    name: '@storybook/angular',\r\n    options: {},\r\n  },\r\n  docs: {\r\n    autodocs: \"tag\"\r\n  }\r\n}"
+                    "defaultValue": "{\r\n  stories: ['../**/*.stories.@(js|jsx|ts|tsx|mdx)'],\r\n  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions', '@storybook/addon-docs'],\r\n  framework: {\r\n    name: '@storybook/angular',\r\n    options: {},\r\n  },\r\n  docs: {\r\n    autodocs: true\r\n  }\r\n}"
                 }
             ],
             "modules/shared/design-system/src/lib/botao/botao.component.stories.ts": [
@@ -362,7 +456,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<BotaoComponent>",
-                    "defaultValue": "{\r\n  tags: ['autodocs'],\r\n  component: BotaoComponent,\r\n  parameters: {\r\n    // controls: { expanded: true },\r\n    docs: {\r\n      description: {\r\n        component: 'Este é um componente de botao utilizado para disparar ações.'\r\n      }\r\n    },\r\n    // argTypes: {\r\n    //   texto: { control: 'text', },\r\n    //   desabilitado: { control: 'boolean' },\r\n    //   variante: { control: { type: 'select', options: ['primario', 'secundario'] } }\r\n    // }\r\n  }\r\n}"
+                    "defaultValue": "{\r\n\r\n  component: BotaoComponent,\r\n  parameters: {\r\n    // controls: { expanded: true },\r\n    docs: {\r\n      description: {\r\n        component: 'Este é um componente de botao utilizado para disparar ações.'\r\n      }\r\n    },\r\n    // argTypes: {\r\n    //   texto: { control: 'text', },\r\n    //   desabilitado: { control: 'boolean' },\r\n    //   variante: { control: { type: 'select', options: ['primario', 'secundario'] } }\r\n    // }\r\n  }\r\n}"
                 },
                 {
                     "name": "Primario",
@@ -485,6 +579,38 @@
                     "defaultValue": "{\r\n  args: {\r\n    ...TerciarioVioleta.args,\r\n    desabilitado: true,\r\n  }\r\n}"
                 }
             ],
+            "modules/shared/design-system/src/lib/input-text/input-text.component.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "modules/shared/design-system/src/lib/input-text/input-text.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<InputTextComponent>",
+                    "defaultValue": "{\n  component: InputTextComponent,\n  parameters: {\n    docs: {\n      description: {\n        component: 'Este é um componente de input.'\n      }\n    },\n\n  }\n}"
+                },
+                {
+                    "name": "Primario",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "modules/shared/design-system/src/lib/input-text/input-text.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    multilinha: false,\n  },\n}"
+                },
+                {
+                    "name": "PrimarioMultilinha",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "modules/shared/design-system/src/lib/input-text/input-text.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    multilinha: true,\n  },\n}"
+                }
+            ],
             "modules/shared/design-system/.storybook/preview.ts": [
                 {
                     "name": "preview",
@@ -508,6 +634,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<BotaoComponent>",
                     "file": "modules/shared/design-system/src/lib/botao/botao.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "modules/shared/design-system/src/lib/input-text/input-text.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<InputTextComponent>",
+                    "file": "modules/shared/design-system/src/lib/input-text/input-text.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -542,7 +681,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 1,
+        "count": 0,
         "status": "low",
         "files": [
             {
@@ -702,6 +841,45 @@
                 "name": "BotaoComponent",
                 "coveragePercent": 16,
                 "coverageCount": "1/6",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/src/lib/input-text/input-text.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/src/lib/input-text/input-text.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primario",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/src/lib/input-text/input-text.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "PrimarioMultilinha",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "modules/shared/design-system/src/lib/input-text/input-text.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputTextComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
                 "status": "low"
             }
         ]

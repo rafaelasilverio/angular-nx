@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { BotaoComponent } from './botao.component';
 
 const meta: Meta<BotaoComponent> = {
-  tags: ['autodocs'],
+
   component: BotaoComponent,
   parameters: {
     // controls: { expanded: true },
